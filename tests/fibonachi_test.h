@@ -84,7 +84,7 @@ TEST(for_test, num4){
     str[0] = 'b';
     str[1] = 's';
     str[2] = '\0';
-    int outFd = open("nadaout1", O_WRONLY|O_CREAT);
+    int outFd = open("nadaout1", O_WRONLY|O_CREAT,S_IRUSR|S_IWUSR);
     int oldOutput = dup(OUTPUT);
     dup2(outFd, OUTPUT);
     // запуск функции
@@ -93,10 +93,10 @@ TEST(for_test, num4){
  fflush(stdout);
     close(outFd);
     dup2(oldOutput, OUTPUT);
-int fd1 = open("nadaout1", O_WRONLY|O_CREAT);
+int fd1 = open("nadaout1", O_WRONLY|O_CREAT,S_IRUSR|S_IWUSR);
 char* buffer = (char*)malloc(1000);
 int count1 = read(fd1, buffer, 1000);
-int fd2 = open("nadach", O_WRONLY|O_CREAT);
+int fd2 = open("nadach", O_WRONLY|O_CREAT,S_IRUSR|S_IWUSR);
 char* buffer1 = (char*)malloc(1000);
 int count2 = read(fd2, buffer1, 1000);
 ASSERT_EQ(count1,count2);
