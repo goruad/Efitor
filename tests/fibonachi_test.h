@@ -4,6 +4,7 @@
 #include <gtest/gtest.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include<errno.h>
 extern "C" {
 #include "common.h"
 #include"text/text.h"
@@ -49,7 +50,7 @@ dup2(out,1);
  ASSERT_EQ(errno,0);
 close(out);
 sprintf(nada, "%s/nada", INPUTDIR);
-printf(nada);
+printf("%s",nada);
 text txt = create_text();
 load(txt, nada);
 
