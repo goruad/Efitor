@@ -34,8 +34,10 @@ TEST(fibonachiTest, negative) {
     //ASSERT_EQ(showwordbeginnings("application"),"a");
 //}
 TEST(showwordbeginningsTest, num0){
+    char *nada = (char *)malloc(sizeof(char) * 1024);
+    sprintf(nada, "%s/nada", INPUTDIR);
     text txt = create_text();
-    load(txt,(char*)"nada" );
+    load(txt,(char*) nada );
     showwordbeginnings(txt);
     ASSERT_TRUE(true);
 }
