@@ -76,6 +76,7 @@ TEST(for_test, num3){
     char* str= (char*)malloc(1000);
     str[0] = 'a';
     str[1] = 'b';
+    str[2] = '\0';
     show_word_beginnings(1000, str);
     SUCCEED();
 }

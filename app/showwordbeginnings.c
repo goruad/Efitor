@@ -25,6 +25,7 @@
     if (contents[i]==' ' && isalpha(contents[i+1])) printf("%c", contents[i+1]);
     if (i==0 && isalpha(contents[i])) printf("%c", contents[i]);
     }
+
 }
 void showwordbeginnings(text txt) {
     /* Вставляет курсор в текст */
