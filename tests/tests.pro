@@ -19,24 +19,24 @@ DEFINES+=INPUTDIR=\\\"$$PWD/input/\\\"
 HEADERS +=     tst_test1.h \
     ../app/myfunc.h \
     fibonachi_test.h \
-    text/text.h \
-    text/_text.h \
-    common.h
+    ../app/text/text.h \
+    ../app/text/_text.h \
+    ../app/common.h
 
 SOURCES +=     main.cpp \
     ../app/myfunc.c \
     ../app/cursors.c \
-    create_text.c \
-    showwordbeginnings.c \
-    append_line.c \
-    load.c \
-    process_forward.c \
-    process_forward_extra_option.c \
-    process_output_2_1.c \
-    remove_all.c \
-    save.c \
-    show.c \
-    tracer.c
+    ../app/create_text.c \
+    ../app/showwordbeginnings.c \
+    ../app/append_line.c \
+    ../app/load.c \
+    ../app/process_forward.c \
+    ../app/process_forward_extra_option.c \
+    ../app/process_output_2_1.c \
+    ../app/remove_all.c \
+    ../app/save.c \
+    ../app/show.c \
+    ../app/tracer.c
 
 INCLUDEPATH += ../app
 
