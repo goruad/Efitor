@@ -42,6 +42,7 @@ void process_output_2_1(text txt, void (*process)(int index, char *contents)) {
 		}
 		else
 		{
+
 		    process(index, str1);
 		    process(index - 1, str2);
 		    current = current->next;
